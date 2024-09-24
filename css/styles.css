@@ -1,8 +1,6 @@
 * {
   font-family: "Poppins", sans-serif;
-  
 }
-
 
 body {
   background: url(../images/93079.jpg);
@@ -16,7 +14,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 20px;
-  
 }
 .logo-icon {
   height: 50px;
@@ -29,29 +26,25 @@ body {
   border: 1px solid wy;
 }
 
-.container-article .cube{
+.container-article .cube {
   position: relative;
   bottom: 70px;
   right: 110px;
 }
 
-.container-article .ring{
+.container-article .ring {
   position: relative;
   bottom: 470px;
-  left: 570px;
+  left: 573px;
   transform: scaleX(-1);
-  
-  
 }
 
 nav {
   display: flex;
   gap: 5px;
-  
 }
 
 nav a {
-  
   text-decoration: none;
   color: #fff;
   padding: 10px;
@@ -59,11 +52,14 @@ nav a {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  
 }
 
 nav a:hover {
-  background: linear-gradient(90deg, rgba(255,105,180,0.7) 0%, rgba(255,0,128,0.7) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 105, 180, 0.7) 0%,
+    rgba(255, 0, 128, 0.7) 100%
+  );
   backdrop-filter: blur(10px);
   transition: all 0.3s ease-in-out;
   border-radius: 25px;
@@ -76,10 +72,16 @@ nav a:hover {
   padding: 50px;
 }
 
-#section-home header h1{
-  background: rgb(131,58,180);background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+#section-home header h1 {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
   font-weight: bold;
-  
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -109,7 +111,6 @@ nav a:hover {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  
 }
 
 .Profile-icon {
@@ -138,11 +139,87 @@ nav a:hover {
   right: 0;
   bottom: 0;
   margin: auto;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5) ;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   border: 1px solid #fff;
   border-radius: 10px;
   transition: bottom 0.5s ease-in-out;
 }
 
+#section-portfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.container {
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+ width: 400px ;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+ 
+  border-radius: 4px;
+}
+
+select {
+  margin: 0 10px 0 5px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #e0e0e0;
+  
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 
+.result {
+  margin-left: 240px;
+  padding: 10px;
+}
+table{
+
+}
+th{
+  background-color: palevioletred;
+  width: 100px;
+  border-radius: 7px;
+}
+tbody{
+  background-color: #e0e0e0;
+  width: 100px;
+  text-align: center;
+  border-radius: 7px;
+  
+}
+footer {
+  margin-top: 50px;
+  border-radius: 50px;
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  background-color: transparent ;
+  backdrop-filter: blur(50px);
+}
