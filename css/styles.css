@@ -203,15 +203,12 @@ form {
 
 input[type="text"],
 input[type="date"],
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 4px;
-}
-
-select {
-  margin: 0 10px 0 5px;
 }
 
 textarea {
@@ -230,7 +227,6 @@ textarea {
   margin-left: 240px;
   padding: 10px;
 }
-
 
 th {
   background-color: #e0e0e0;
@@ -263,23 +259,33 @@ footer {
 
   .photo-banner {
     width: 100%;
-    height: 300px;
+    height: 300px; /* Adjust height for better visibility */
   }
 
   .profile-icon-container {
-    flex-direction: column;
+    flex-direction: column; /* Stack icons */
+    align-items: center;
   }
 
-  #section-portfolio {
-    flex-direction: column;
-  }
-
-  .container {
-    flex-direction: column;
+  .Profile-icon {
+    width: 80%; /* Adjust width for tablet view */
+    margin: 20px 0; /* Increase margin for spacing */
   }
 
   form {
+    width: 80%; /* Slightly less than full width */
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 16px; /* Increase font size for readability */
+  }
+
+  .submit-btn {
     width: 100%;
+    padding: 12px; /* Adequate padding */
   }
 }
 
@@ -314,7 +320,7 @@ footer {
   }
 
   .Profile-icon {
-    width: 100%;
+    width: 90%; /* Adjust to avoid full width */
     margin: 10px 0;
   }
 
@@ -325,6 +331,23 @@ footer {
   }
 
   form {
-    width: 100%;
+    width: 90%; /* Make form responsive */
   }
+
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 14px; /* Slightly increase font size */
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px; /* Increase padding for easier tapping */
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
 }
