@@ -6,7 +6,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css\styles.css" />
     <script src="js/script.js"></script>
-   
+    <script src="https://kit.fontawesome.com/4ce7f79e2b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -30,9 +32,25 @@
       <section id="section-home">
         <header>
           <h1>Halo! saya alqa. <br />Welcome To My Website</h1>
+          
           <p>
-            Nama saya izzudin alqassam, biasa dipanggil alqa.Saya adalah mahasiswa di Universitas Bina Sarana Informatia yang sedang menempuh pendidikan S1 di jurusan Teknik Informatika.
+            Nama saya izzudin alqassam, you can call me <span style="font-size: 25px; background: linear-gradient(
+              90deg,
+              rgba(131, 58, 180, 1) 0%,
+              rgba(253, 29, 29, 1) 50%,
+              rgba(252, 176, 69, 1) 100%
+            );
+            font-weight: bold;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;">alqa</span>.Saya adalah mahasiswa di Universitas Bina Sarana Informatia yang sedang menempuh pendidikan S1 di jurusan Teknik Informatika.
+            <br>
           </p>
+          <h1>Support Tech :</h1>
+          <div class="icon-web">
+            <img src="images/html.png" alt="" width="50px" height="50px" >
+          <img src="images/css-3.png" alt="" width="50px" height="50px" style="" >
+          <img src="images/js.png" alt="" width="50px" height="50px" style="border-radius: 10px; box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);">
+          </div>
         </header>
         <article class="container-article">
           <div class="photo-banner"></div>
@@ -66,7 +84,7 @@
         
         <form>
           <label for="nama">Nama :</label>
-          <input type="text" name="nama" id="nama">
+          <input required type="text" name="nama" id="nama">
           <br>
           <label for="tglLahir">Tgl Lahir :</label>
           <input type="date" name="tglLahir" id="tglLahir"></label>
@@ -87,7 +105,7 @@
           <table id="tabel-data">
             <thead>
               <tr>
-                <th>Nama</th>
+                <th style="backdrop-filter: blur(10px);">Nama</th>
                 <th>Tgl Lahir</th>
                 <th>Jenis Kelamin</th>
                 <th>Pesan</th>
@@ -96,11 +114,45 @@
             </thead>
             <tbody id="tabel-body"></tbody>
             
+            
           </table>
       </div>
       <!-- Message Us -->
       <section id="section-message-us"></section>
     </main>
     <footer>Created by &copy; Alqa</footer>
+    <!-- sweet alert -->
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const nama = data.get("nama");
+        const tglLahir = data.get("tglLahir");
+        const kelamin = data.get("kelamin");
+        const pesan = data.get("pesan");
+        swal({
+          title: "Berhasil Menambahkan Data!",
+          icon: "success",
+        });
+      });
+
+      const audio = new Audio("../music/jj.mp3");
+swal({
+  title: "Sebelum buka website play lagu biar asik ✌",
+  text: "Klik oke untuk memutar lagu",
+  icon: "info",
+  buttons: {
+    ok: {
+      text: "Oke",
+      value: true,
+    },
+  },
+}).then((value) => {
+  if (value) {
+    audio.play();
+  }
+});
+    </script>
   </body>
 </html>

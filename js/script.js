@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     form.addEventListener("submit", (e) => {
@@ -26,8 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const hapusBtn = row.querySelector(".hapus-btn");
       hapusBtn.addEventListener("click", () => {
         row.remove();
+        swal({
+          title: "Berhasil dihapus!",
+          icon: "info",
+        });
       });
   
+
       // Menyembunyikan data dari URL
       const url = window.location.href;
       const params = new URLSearchParams(url);
@@ -38,3 +45,5 @@ document.addEventListener("DOMContentLoaded", () => {
       window.history.pushState({}, "", url.split("?")[0]);
     });
   });
+
+  
