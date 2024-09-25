@@ -46,6 +46,8 @@ body {
 
   #section-our-profile {
     align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .Profile-icon {
@@ -122,13 +124,13 @@ body {
 .container-article .cube {
   position: relative;
   bottom: 70px;
-  right: 110px;
+  right: 30px;
 }
 
 .container-article .ring {
   position: relative;
   bottom: 470px;
-  left: 573px;
+  left: 473px;
   transform: scaleX(-1);
 }
 
@@ -185,16 +187,30 @@ nav a:hover {
 }
 
 .photo-banner {
-  background-image: url(../images/code.jpg);
+  background-image: url(../images/code.jpg), url(../images/bg.jpg);
   margin: 20px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
   width: 600px;
   height: 400px;
   border-radius: 20px;
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+  animation: fade 10s infinite;
 }
+
+@keyframes fade {
+  0% {
+    background-image: url(../images/code.jpg);
+  }
+  50% {
+    background-image: url(../images/bg.jpg);
+  }
+  100% {
+    background-image: url(../images/code.jpg);
+  }
+}
+
 
 #section-our-profile {
   display: flex;
@@ -211,6 +227,36 @@ nav a:hover {
   height: 300px;
   width: 400px;
   background-image: url(../images/code.jpg);
+  background-size: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  bottom: 21px;
+  padding: 10px;
+}
+.Profile-icon:nth-child(2) {
+  height: 300px;
+  width: 400px;
+  background-image: url(../images/basket.jpg);
+  background-size: cover;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  bottom: 21px;
+  padding: 10px;
+}
+.Profile-icon:nth-child(3){
+  height: 300px;
+  width: 400px;
+  background-image: url(../images/bg.jpg);
   background-size: cover;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
